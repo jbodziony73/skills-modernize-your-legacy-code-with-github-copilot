@@ -98,23 +98,13 @@ Manages data persistence and provides a centralized interface for reading and wr
 
 ## System Architecture
 
-```text
-┌─────────────────┐
-│   main.cob      │ ← User Interface Layer
-│  (MainProgram)  │
-└─────────────────┘
-         │
-         ▼
-┌─────────────────┐
-│ operations.cob  │ ← Business Logic Layer
-│  (Operations)   │
-└─────────────────┘
-         │
-         ▼
-┌─────────────────┐
-│   data.cob      │ ← Data Access Layer
-│ (DataProgram)   │
-└─────────────────┘
+```mermaid
+flowchart TD
+    A[main.cob\n(MainProgram)\nUser Interface Layer]
+    B[operations.cob\n(Operations)\nBusiness Logic Layer]
+    C[data.cob\n(DataProgram)\nData Access Layer]
+    A --> B
+    B --> C
 ```
 
 ## Student Account Management Features
